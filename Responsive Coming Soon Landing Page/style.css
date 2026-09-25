@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    box-sizing: border-box;
+}
+
+body {
+    background: #eee;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px 7%;
+    background: #eee;
+    min-height: 100vh;
+    gap: 40px;
+}
+
+.container .content {
+    flex: 1 1 400px;
+}
+
+.container .image {
+    flex: 1 1 400px;
+}
+
+.container .image img {
+    width: 100%;
+    display: block;
+}
+
+.container .content .title {
+    font-size: 45px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #2980b9;
+    line-height: 1.15;
+}
+
+.container .content p {
+    color: #666;
+    padding: 15px 0;
+    line-height: 1.6;
+    max-width: 550px;
+}
+
+.container .content .count-down {
+    display: flex;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.container .content .count-down .box {
+    padding: 15px 5px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, .1);
+    text-align: center;
+    flex: 1 1 20px;
+    min-width: 75px;
+}
+
+.container .content .count-down .box h3 {
+    font-size: 50px;
+    color: #333;
+    font-weight: 800;
+}
+
+.container .content .count-down .box span {
+    color: #2980b9;
+    font-size: 18px;
+}
+
+.container .content .btn {
+    display: inline-block;
+    padding: 12px 50px;
+    margin: 20px 0 0;
+    font-size: 17px;
+    background: #2980b9;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: .2s ease-out;
+}
+
+.container .content .btn:hover {
+    letter-spacing: 2px;
+    background: #256a99;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .container {
+        justify-content: center;
+        text-align: center;
+        padding: 30px 5%;
+    }
+
+    .container .content {
+        order: 1;
+        text-align: center;
+    }
+
+    .container .content p {
+        margin: 0 auto;
+    }
+
+    .container .content .count-down {
+        justify-content: center;
+    }
+
+    .container .image {
+        order: 0;
+        max-width: 480px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+    .container {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .container .content .title {
+        font-size: 30px;
+    }
+
+    .container .content p {
+        font-size: 14px;
+    }
+
+    .container .content .count-down {
+        gap: 8px;
+    }
+
+    .container .content .count-down .box {
+        min-width: 0;
+        padding: 8px 4px;
+    }
+
+    .container .content .count-down .box h3 {
+        font-size: 26px;
+    }
+
+    .container .content .count-down .box span {
+        font-size: 12px;
+    }
+
+    .container .content .btn {
+        padding: 10px 35px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 350px) {
+    .container .content .count-down {
+        flex-wrap: wrap;
+    }
+
+    .container .content .count-down .box {
+        flex: 1 1 40%;
+    }
+}
