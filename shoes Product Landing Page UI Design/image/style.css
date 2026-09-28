@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap');
+
+* {
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 35px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    font-size: 28px;
+    color: #333333;
+    font-weight: 500;
+}
+
+header .navbar a {
+    font-size: 17px;
+    color: #666666;
+    margin-left: 28px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+header .navbar a:hover {
+    color: #111111;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    position: relative;
+}
+
+.container .content {
+    flex: 1;
+    max-width: 460px;
+    z-index: 2;
+}
+
+.container .content h3 {
+    color: #2b2b2b;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 15px;
+}
+
+.container .content p {
+    color: #666666;
+    font-size: 16px;
+    line-height: 1.6;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+}
+
+.container .content .btn {
+    display: inline-block;
+    font-size: 16px;
+    padding: 11px 30px;
+    background-color: #333333;
+    color: #ffffff;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.container .content .btn:hover {
+    background-color: #555555;
+}
+
+.container .image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.container .image::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    height: 480px;
+    width: 480px;
+    background: #ececec;
+    z-index: -1;
+}
+
+.container .image .shoes {
+    width: 110%;
+    max-width: 620px;
+    transform: rotate(-38deg);
+    z-index: 1;
+    filter: drop-shadow(-10px 15px 20px rgba(0, 0, 0, 0.15));
+    display: none;
+}
+
+.container .image .shoes.active {
+    display: initial;
+    animation: animate .5s cubic-bezier(.45, 1.63, 0.98, 1.55);
+}
+
+@keyframes animate {
+    0%{
+        transform: rotate(0deg) scale(.7);
+    }
+}
+
+.container .left,
+.container .right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 45px;
+    width: 45px;
+    border: 1px solid #333333;
+    color: #333333;
+    line-height: 41px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #ffffff;
+    z-index: 10;
+    transition: 0.3s ease;
+}
+
+.container .left {
+    left: 20px;
+}
+
+.container .right {
+    right: 20px;
+}
+
+.container .left:hover,
+.container .right:hover {
+    background-color: #333333;
+    color: #ffffff;
+}
