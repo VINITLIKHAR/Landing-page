@@ -5,40 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Shoes-landing-page</title>
+    <title>Adidas Shoes - Landing Page</title>
 </head>
 
 <body>
+
     <header>
         <a href="#" class="logo">Adidas</a>
 
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
             <a href="#">Home</a>
             <a href="#">About</a>
-            <a href="#">Category</a>
             <a href="#">Products</a>
+            <a href="#">Category</a>
             <a href="#">Blogs</a>
         </nav>
+
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
 
-    <section class="container">
-        <div class="left">&lt;</div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#" onclick="closeMenu()">Home</a>
+        <a href="#" onclick="closeMenu()">About</a>
+        <a href="#" onclick="closeMenu()">Products</a>
+        <a href="#" onclick="closeMenu()">Category</a>
+        <a href="#" onclick="closeMenu()">Blogs</a>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+    <section class="container" id="home">
+
+        <div class="arrow-btn left-arrow" id="leftArrow">&#60;</div>
 
         <div class="content">
             <h3>New Adidas Shoes</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod dicta enim tenetur dolorum nam nemo rerum laboriosam ab architecto quo!</p>
-            <a href="#" class="btn">Add To Cart</a>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo nam dolorem commodi ipsum possimus minus velit eos veniam aliquam incidunt!</p>
+            <a href="#" class="btn" id="addToCart">Add To Cart</a>
         </div>
 
-        <div class="image">
-            <img class="shoes active" src="./1.png" alt="Adidas Shoe">
-            <img class="shoes" src="./2.png" alt="Adidas Shoe">
-            <img class="shoes" src="./3.png" alt="Adidas Shoe">
+        <div class="image-wrap">
+            <div class="circle-bg"></div>
+            <img class="shoe-img active" src="./1.png" alt="Shoe 1">
+            <img class="shoe-img" src="./2.png" alt="Shoe 2">
+            <img class="shoe-img" src="./3.png" alt="Shoe 3">
         </div>
 
-        <div class="right" onclick ="prev()">&gt;</div>
+        <div class="arrow-btn right-arrow" id="rightArrow">&#62;</div>
+
     </section>
 
+    <div class="toast" id="toast">
+        <span id="toastMsg"></span>
+    </div>
+
+    <script src="./main.js"></script>
 </body>
 
 </html>
